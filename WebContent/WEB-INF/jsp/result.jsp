@@ -13,7 +13,14 @@ Password password = (Password) request.getAttribute("password");
 <body>
 <h1>パスワード生成結果</h1>
 <p>
-パスワード：<%= password.getPasswordString() %><br>
+パスワード：<br>
+<%
+String[] outputPasswordStringArray = password.getPasswordStringArray();
+int iLength = Integer.parseInt(password.getNumberOfPassword());
+	for (int i = 0; i < iLength; i++){
+		out.println(outputPasswordStringArray[i] + "<br>");
+	}
+%>
 </p>
 <a href="/randomPasswordGenerator/PasswordGenerate">戻る</a>
 </body>

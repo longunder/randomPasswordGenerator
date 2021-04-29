@@ -8,6 +8,7 @@
 <body>
 <h1>パスワード生成</h1>
 <form action="/randomPasswordGenerator/PasswordGenerate" method="post">
+個数：<input type="text" name="numberOfPassword">(100個まで)<br>
 <input type="submit" value="生成">
 </form>
 </body>

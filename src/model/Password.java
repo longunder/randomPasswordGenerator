@@ -3,20 +3,30 @@ package model;
 import java.io.Serializable;
 
 public class Password implements Serializable {
-	private String passwordString;
+	private String numberOfPassword;
+	private String[] passwordStringArray;
 
 	public Password() {
 	}
 
-	public Password(String passwordString) {
-		this.passwordString = passwordString;
+	public Password(String[] passwordStringArray, String numberOfPassword) {
+		this.passwordStringArray = passwordStringArray;
+		this.numberOfPassword = numberOfPassword;
 	}
 
-	public void setPasswordString(String passwordString) {
-		this.passwordString = passwordString;
+	public void setPasswordStringArray(String[] passwordStringArray) {
+		this.passwordStringArray = passwordStringArray;
 	}
 
-	public String getPasswordString() {
-		return this.passwordString;
+	public String[] getPasswordStringArray() {
+		return this.passwordStringArray;
+	}
+
+	public void setNumberOfPassword(String numberOfPassword) {
+		this.numberOfPassword = numberOfPassword;
+	}
+
+	public String getNumberOfPassword() {
+		return this.numberOfPassword;
 	}
 }
