@@ -24,7 +24,14 @@ public class PasswordGenerate extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// リクエストパラメータを取得する
+		String numberOfPassword = request.getParameter("numberOfPassword");
+
+		// 入力値をプロパティに設定する
 		Password password = new Password();
+		password.setNumberOfPassword(numberOfPassword);
+
+		// パスワードの文字列を作成する
 		PasswordGenerateLogic passwordGenerateLogic = new PasswordGenerateLogic();
 		try {
 			// ランダムな英数字をパスワードに設定する

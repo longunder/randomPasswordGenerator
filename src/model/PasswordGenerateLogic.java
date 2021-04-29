@@ -29,5 +29,7 @@ public class PasswordGenerateLogic {
 	NoSuchAlgorithmException {
 		String passwordString = getPasswordString();
 		password.setPasswordString(passwordString);
+		String numberOfPassword = password.getNumberOfPassword();
+		password.setNumberOfPassword(numberOfPassword);
 	}
 }
