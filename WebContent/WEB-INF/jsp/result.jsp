@@ -15,9 +15,10 @@ Password password = (Password) request.getAttribute("password");
 <p>
 パスワード：<br>
 <%
+String[] outputPasswordStringArray = password.getPasswordStringArray();
 int iLength = Integer.parseInt(password.getNumberOfPassword());
 	for (int i = 0; i < iLength; i++){
-		out.println(password.getPasswordString() + "<br>");
+		out.println(outputPasswordStringArray[i] + "<br>");
 	}
 %>
 </p>
